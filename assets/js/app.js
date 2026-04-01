@@ -1,3 +1,5 @@
+document.body.classList.add("js-ready");
+
 const page = document.body.dataset.page || "home";
 
 const navItems = [
@@ -52,9 +54,9 @@ const proofQuotes = [
 ];
 
 const proofReels = [
-  { title: "Smoke And Fire Opening", caption: "The first twenty seconds should already feel worth filming.", image: "assets/images/chicken-tikka-kebab.png", lightbox: galleryItems[0] },
-  { title: "Coastal Chapter Shift", caption: "A softer visual beat before the crowd energy spikes again.", image: "assets/images/chicken-thai-curry.png", lightbox: galleryItems[3] },
-  { title: "Street Lane Close", caption: "This is the part of the night where the phones all come out.", image: "assets/images/chicken-tangdi-kufi-kebab.png", lightbox: galleryItems[8] }
+  { title: "Smoke And Fire Opening", caption: "The first twenty seconds should already feel worth filming.", image: "assets/images/chicken-tikka-kebab.png", lightboxIndex: 0 },
+  { title: "Coastal Chapter Shift", caption: "A softer visual beat before the crowd energy spikes again.", image: "assets/images/chicken-thai-curry.png", lightboxIndex: 3 },
+  { title: "Street Lane Close", caption: "This is the part of the night where the phones all come out.", image: "assets/images/chicken-tangdi-kufi-kebab.png", lightboxIndex: 8 }
 ];
 
 const ticketTiers = [
@@ -534,7 +536,7 @@ function renderProofWall() {
     const encodeItem = (item) => encodeURIComponent(JSON.stringify(item));
     reelHost.innerHTML = proofReels.map((item) => `
       <article class="proof-reel-card reveal">
-        <button type="button" data-lightbox="${encodeItem(item.lightbox)}">
+        <button type="button" data-lightbox="${encodeItem(galleryItems[item.lightboxIndex])}">
           <img src="${item.image}" alt="${item.title}" loading="lazy" />
           <div class="proof-reel-copy">
             <strong>${item.title}</strong>

@@ -45,6 +45,18 @@ const instagramMoments = [
   { handle: "@mumbaifoodscene", label: "Creator pit", caption: "Short-form content works when the room already looks alive before the creators arrive.", meta: "Fast-share interview zone" }
 ];
 
+const proofQuotes = [
+  { label: "Preview Guest Note", title: "Hospitality group chat reaction", body: "This is the first festival page in a while that feels like the night will actually be louder, hotter, and more social than the poster." },
+  { label: "Creator Watchlist", title: "Short-form food creator instinct", body: "If the grills, qawwali, and street lane hit the same night, the content from this event will travel on its own." },
+  { label: "VIP Buyer Signal", title: "Premium booking behavior", body: "The right ticket pressure matters. Once people believe the room will feel full and culturally relevant, they stop waiting." }
+];
+
+const proofReels = [
+  { title: "Smoke And Fire Opening", caption: "The first twenty seconds should already feel worth filming.", image: "assets/images/chicken-tikka-kebab.png", lightbox: galleryItems[0] },
+  { title: "Coastal Chapter Shift", caption: "A softer visual beat before the crowd energy spikes again.", image: "assets/images/chicken-thai-curry.png", lightbox: galleryItems[3] },
+  { title: "Street Lane Close", caption: "This is the part of the night where the phones all come out.", image: "assets/images/chicken-tangdi-kufi-kebab.png", lightbox: galleryItems[8] }
+];
+
 const ticketTiers = [
   { name: "Early Bird", badge: "Fastest Move", price: "INR 1,499", note: "Only 200 passes left in this release.", plan: "standard", highlight: false, features: ["Festival entry across all food chapters", "Access to the street-food lane", "Live stage and performance viewing", "Photo zones and creator-friendly installations"] },
   { name: "Festival Pass", badge: "Most Popular", price: "INR 2,999", note: "Best value before the next price jump.", plan: "gold", highlight: true, features: ["Everything in Early Bird", "Priority access to chef demo seating", "Reserved block for qawwali and stage acts", "Tasting coupons across featured counters"] },
@@ -505,6 +517,38 @@ function renderHomeTickets() {
     </article>`).join("");
 }
 
+function renderProofWall() {
+  const stackHost = document.getElementById("proofStack");
+  const reelHost = document.getElementById("proofReelGrid");
+  if (stackHost) {
+    stackHost.innerHTML = proofQuotes.map((item) => `
+      <article class="proof-quote-card reveal">
+        <span class="package-badge">${item.label}</span>
+        <h3>${item.title}</h3>
+        <p>${item.body}</p>
+        <a class="button-ghost" href="#ticketSection">Book Before It Moves</a>
+      </article>`).join("");
+  }
+
+  if (reelHost) {
+    const encodeItem = (item) => encodeURIComponent(JSON.stringify(item));
+    reelHost.innerHTML = proofReels.map((item) => `
+      <article class="proof-reel-card reveal">
+        <button type="button" data-lightbox="${encodeItem(item.lightbox)}">
+          <img src="${item.image}" alt="${item.title}" loading="lazy" />
+          <div class="proof-reel-copy">
+            <strong>${item.title}</strong>
+            <span>${item.caption}</span>
+          </div>
+        </button>
+      </article>`).join("");
+
+    reelHost.querySelectorAll("[data-lightbox]").forEach((button) => {
+      button.addEventListener("click", () => openLightbox(JSON.parse(decodeURIComponent(button.dataset.lightbox))));
+    });
+  }
+}
+
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
   const filters = document.getElementById("galleryFilters");
@@ -771,6 +815,7 @@ renderVendorEdit();
 renderGallery();
 renderGalleryPreview();
 renderInstagramWall();
+renderProofWall();
 renderPackages();
 renderHomeTickets();
 renderFeatureCards();

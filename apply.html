@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply | TasteOfHindustan 2026</title>
-  <meta name="description" content="Start the 4-step TasteOfHindustan 2026 application flow: choose category, share details, set payment, and confirm." />
+  <title>Reserve Tickets | TasteOfHindustan 2026</title>
+  <meta name="description" content="Reserve TasteOfHindustan 2026 tickets in four steps: choose your pass, share guest details, select payment, and confirm." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-page="apply">
@@ -18,9 +18,9 @@
       <section class="section">
         <div class="section-shell">
           <div class="section-heading centered reveal">
-            <span class="eyebrow">Application Funnel</span>
-            <h1>A premium four-step flow that feels like concierge onboarding, not admin work.</h1>
-            <p>Choose your category, share brand details, select your payment route, and review everything on a polished confirmation stage.</p>
+            <span class="eyebrow">Ticket Reservation</span>
+            <h1>A four-step reservation flow that feels like concierge booking, not admin work.</h1>
+            <p>Choose your pass, share guest details, select your payment route, and review everything on a polished confirmation stage before the release closes.</p>
           </div>
         </div>
       </section>
@@ -28,8 +28,8 @@
       <section class="section">
         <div class="section-shell application-shell">
           <aside class="stepper reveal">
-            <div class="stepper-item active"><div class="step-index">1</div><div><strong class="mini-title">Choose category</strong><p class="copy">Restaurants, chefs, cafes, sponsors, and more.</p></div></div>
-            <div class="stepper-item"><div class="step-index">2</div><div><strong class="mini-title">Upload details</strong><p class="copy">Brand, city, website, and participation notes.</p></div></div>
+            <div class="stepper-item active"><div class="step-index">1</div><div><strong class="mini-title">Choose pass</strong><p class="copy">Early Bird, Festival Pass, or Royal Table.</p></div></div>
+            <div class="stepper-item"><div class="step-index">2</div><div><strong class="mini-title">Guest details</strong><p class="copy">Lead guest, city, contact details, and group size.</p></div></div>
             <div class="stepper-item"><div class="step-index">3</div><div><strong class="mini-title">Payment</strong><p class="copy">Reserve through invoice, UPI, or card preference.</p></div></div>
             <div class="stepper-item"><div class="step-index">4</div><div><strong class="mini-title">Confirmation</strong><p class="copy">Final review before concierge follow-up.</p></div></div>
           </aside>
@@ -40,18 +40,18 @@
             <div class="form-step active">
               <div class="section-heading" style="margin-bottom:1.5rem;">
                 <span class="eyebrow">Step 1</span>
-                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Choose your participation path</h2>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Choose your ticket path</h2>
               </div>
               <div class="option-grid">
-                <div class="choice-card"><input id="cat-restaurant" type="radio" name="category" value="Restaurant" checked><label for="cat-restaurant"><strong>Restaurant</strong><span>For flagship dining rooms and multi-location brands.</span></label></div>
-                <div class="choice-card"><input id="cat-chef" type="radio" name="category" value="Chef"><label for="cat-chef"><strong>Chef</strong><span>For chef-led identities and culinary personalities.</span></label></div>
-                <div class="choice-card"><input id="cat-cafe" type="radio" name="category" value="Cafe"><label for="cat-cafe"><strong>Cafe</strong><span>For modern cafe formats with strong brand language.</span></label></div>
-                <div class="choice-card"><input id="cat-sponsor" type="radio" name="category" value="Sponsor"><label for="cat-sponsor"><strong>Sponsor</strong><span>For beverage, premium ingredient, and hospitality partners.</span></label></div>
+                <div class="choice-card"><input id="cat-foodlover" type="radio" name="category" value="Food Lover" checked><label for="cat-foodlover"><strong>Food Lover</strong><span>For guests coming mainly for the taste trail and festival energy.</span></label></div>
+                <div class="choice-card"><input id="cat-group" type="radio" name="category" value="Group Booking"><label for="cat-group"><strong>Group Booking</strong><span>For friends, teams, and table bookings arriving together.</span></label></div>
+                <div class="choice-card"><input id="cat-creator" type="radio" name="category" value="Creator / Media"><label for="cat-creator"><strong>Creator / Media</strong><span>For guests who care about footage, access, and crowd moments.</span></label></div>
+                <div class="choice-card"><input id="cat-vip" type="radio" name="category" value="VIP Host"><label for="cat-vip"><strong>VIP Host</strong><span>For premium buyers who want the smoothest version of the night.</span></label></div>
               </div>
               <div class="option-grid" style="margin-top:1rem;">
-                <div class="choice-card"><input id="plan-standard" type="radio" name="plan" value="standard"><label for="plan-standard"><strong>Standard</strong><span>Entry access with polished visibility.</span></label></div>
-                <div class="choice-card"><input id="plan-gold" type="radio" name="plan" value="gold"><label for="plan-gold"><strong>Gold</strong><span>Priority features and stronger media support.</span></label></div>
-                <div class="choice-card"><input id="plan-vip" type="radio" name="plan" value="vip" checked><label for="plan-vip"><strong>VIP</strong><span>Headline-ready activation with lounge and press emphasis.</span></label></div>
+                <div class="choice-card"><input id="plan-standard" type="radio" name="plan" value="standard"><label for="plan-standard"><strong>Early Bird</strong><span>Fastest way in before the price climbs.</span></label></div>
+                <div class="choice-card"><input id="plan-gold" type="radio" name="plan" value="gold"><label for="plan-gold"><strong>Festival Pass</strong><span>Best value with stronger access across the night.</span></label></div>
+                <div class="choice-card"><input id="plan-vip" type="radio" name="plan" value="vip" checked><label for="plan-vip"><strong>Royal Table</strong><span>VIP access with the smoothest hosting and lounge experience.</span></label></div>
               </div>
               <div class="form-actions"><span></span><button class="button" type="button" data-next-step>Continue</button></div>
             </div>
@@ -59,17 +59,17 @@
             <div class="form-step">
               <div class="section-heading" style="margin-bottom:1.5rem;">
                 <span class="eyebrow">Step 2</span>
-                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Share brand and delegate details</h2>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Share guest and group details</h2>
               </div>
               <div class="form-grid">
-                <div class="field"><label for="brand">Brand / Participant Name</label><input id="brand" name="brand" type="text" placeholder="Taste studio, restaurant, or founder name" /></div>
-                <div class="field"><label for="contact">Contact Person</label><input id="contact" name="contact" type="text" placeholder="Primary delegate" /></div>
+                <div class="field"><label for="brand">Lead Guest / Group Name</label><input id="brand" name="brand" type="text" placeholder="Your name or the group lead" /></div>
+                <div class="field"><label for="contact">Contact Person</label><input id="contact" name="contact" type="text" placeholder="Primary guest or booking contact" /></div>
                 <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="name@brand.com" /></div>
                 <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+91" /></div>
                 <div class="field"><label for="city">City</label><input id="city" name="city" type="text" placeholder="Mumbai, Delhi, Bengaluru..." /></div>
-                <div class="field"><label for="website">Website / Instagram</label><input id="website" name="website" type="text" placeholder="https:// or @handle" /></div>
-                <div class="field full"><label for="files">Upload deck / menu / press kit</label><input id="files" name="files" type="file" /></div>
-                <div class="field full"><label for="notes">What makes your brand award-night ready?</label><textarea id="notes" name="notes" placeholder="Tell the jury and concierge team about your story, signature dishes, or experience style."></textarea></div>
+                <div class="field"><label for="website">Instagram / Social Handle</label><input id="website" name="website" type="text" placeholder="@handle or profile link" /></div>
+                <div class="field full"><label for="files">Group Size / Seating Note</label><input id="files" name="files" type="text" placeholder="2 guests, 4 guests, couple entry, VIP table..." /></div>
+                <div class="field full"><label for="notes">What are you coming for?</label><textarea id="notes" name="notes" placeholder="Street food, chef demos, VIP lounge, live music, creator coverage, or anything the concierge should know."></textarea></div>
               </div>
               <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="button" data-next-step>Continue</button></div>
             </div>
@@ -80,14 +80,14 @@
                 <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Choose your payment route</h2>
               </div>
               <div class="option-grid">
-                <div class="choice-card"><input id="pay-invoice" type="radio" name="payment" value="Invoice" checked><label for="pay-invoice"><strong>Invoice</strong><span>Best for hospitality groups, sponsor teams, and finance approval flows.</span></label></div>
-                <div class="choice-card"><input id="pay-upi" type="radio" name="payment" value="UPI"><label for="pay-upi"><strong>UPI</strong><span>Fast track for founders and operators who want instant reservation.</span></label></div>
-                <div class="choice-card"><input id="pay-card" type="radio" name="payment" value="Card"><label for="pay-card"><strong>Card</strong><span>Secure direct payment route for quick closing.</span></label></div>
-                <div class="choice-card"><input id="pay-concierge" type="radio" name="payment" value="Concierge callback"><label for="pay-concierge"><strong>Concierge callback</strong><span>Talk through sponsorship, custom branding, or VIP activation needs.</span></label></div>
+                <div class="choice-card"><input id="pay-invoice" type="radio" name="payment" value="Invoice" checked><label for="pay-invoice"><strong>Invoice</strong><span>Best for group bookings, hosted tables, and corporate approvals.</span></label></div>
+                <div class="choice-card"><input id="pay-upi" type="radio" name="payment" value="UPI"><label for="pay-upi"><strong>UPI</strong><span>Fastest route for guests who want to lock the ticket immediately.</span></label></div>
+                <div class="choice-card"><input id="pay-card" type="radio" name="payment" value="Card"><label for="pay-card"><strong>Card</strong><span>Secure direct payment route for quick reservation.</span></label></div>
+                <div class="choice-card"><input id="pay-concierge" type="radio" name="payment" value="Concierge callback"><label for="pay-concierge"><strong>Concierge callback</strong><span>Talk through group seating, VIP hosting, or custom requests.</span></label></div>
               </div>
               <div class="comparison-grid" style="margin-top:1rem;">
-                <article class="confirmation-card"><strong>VIP urgency</strong><p>Only 20 VIP spotlight slots are currently positioned on the site.</p></article>
-                <article class="confirmation-card"><strong>Gold showcase</strong><p>Priority scheduling and press-ready touchpoints are framed for Gold upward.</p></article>
+                <article class="confirmation-card"><strong>Early-bird urgency</strong><p>Only 200 early-bird tickets are positioned in this release batch.</p></article>
+                <article class="confirmation-card"><strong>Royal Table</strong><p>VIP lounge seats are limited and are likely to move first once social sharing picks up.</p></article>
                 <article class="confirmation-card"><strong>What happens next</strong><p>Your preferred payment method becomes the handoff point for the concierge team.</p></article>
               </div>
               <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="button" data-next-step>Review</button></div>
@@ -96,7 +96,7 @@
             <div class="form-step">
               <div class="section-heading" style="margin-bottom:1.5rem;">
                 <span class="eyebrow">Step 4</span>
-                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Review your confirmation stage</h2>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Review your reservation stage</h2>
               </div>
               <div class="confirmation-grid">
                 <div class="confirmation-card"><strong>Brand</strong><span id="confirmBrand">Your Brand</span></div>
@@ -107,10 +107,10 @@
               </div>
               <ul class="form-notes" style="margin-top:1.2rem;">
                 <li>Concierge follow-up can be positioned within 24 hours of submission.</li>
-                <li>Gold and VIP applications can be prioritized for media and sponsor planning.</li>
+                <li>Festival Pass and Royal Table reservations can be prioritized as availability tightens.</li>
                 <li>The site is designed so this last screen feels like a reservation, not a dead-end form.</li>
               </ul>
-              <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="submit">Submit Application</button></div>
+              <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="submit">Submit Reservation</button></div>
               <div id="submitMessage" style="margin-top:1rem;"></div>
             </div>
           </form>

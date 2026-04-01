@@ -4,8 +4,14 @@ const navItems = [
   { href: "index.html", label: "Home", key: "home" },
   { href: "experience.html", label: "Experience", key: "experience" },
   { href: "gallery.html", label: "Gallery", key: "gallery" },
-  { href: "packages.html", label: "Packages", key: "packages" },
-  { href: "apply.html", label: "Apply", key: "apply" }
+  { href: "packages.html", label: "Tickets", key: "packages" },
+  { href: "apply.html", label: "Reserve", key: "apply" }
+];
+
+const chapterData = [
+  { kicker: "Chapter I", title: "North Fire", description: "The opening chapter leans into Delhi and Lucknow: galouti kebabs, copper-handled gravies, sheermal, charcoal heat, and a room that feels like smoke has been curated on purpose.", notes: ["Galouti and seekh trail", "Qawwali-led mood shift", "Copper, coal, and velvet tones"], image: "assets/images/chicken-tikka-kebab.png" },
+  { kicker: "Chapter II", title: "South Coast", description: "The middle act cools into curry leaf fragrance, ghee roast drama, appam service, filter coffee, and polished coastal plating that slows the pace before the street chapter explodes.", notes: ["Appam and pepper fry", "Filter coffee and brass service", "Coastal spice and softer lighting"], image: "assets/images/chicken-thai-curry.png" },
+  { kicker: "Chapter III", title: "Street After Dark", description: "The final chapter belongs to Mumbai chaat, Kolkata rolls, neon counters, late-night crowds, and the kind of food lane that makes phones come out automatically.", notes: ["Chaat, rolls, and grills", "Creator pit and flash photography", "After-dark festival energy"], image: "assets/images/chicken-tangdi-kufi-kebab.png" }
 ];
 
 const regionData = [
@@ -18,10 +24,31 @@ const regionData = [
 ];
 
 const experienceData = [
-  { kicker: "Arrival", title: "Red Carpet And Flashline Entry", description: "A velvet-lit arrival corridor, branded step-and-repeat, and curated photography moments designed for premium social capture.", bullets: ["Host-led guest reception", "Photographer pit and interviews", "VIP concierge escort"], image: "assets/images/chicken-tikka-kebab.png" },
-  { kicker: "Coverage", title: "Media, Press And Storytelling", description: "Create moments that journalists, creators, and local media can package instantly. This feels like a cultural premiere, not a standard expo.", bullets: ["Press-room content drops", "Interview nooks", "Live social reels"], image: "assets/images/aab-gosht-shorba.png" },
-  { kicker: "Networking", title: "Founder Tables And Brand Mixers", description: "A premium networking layer for restaurateurs, chefs, hospitality investors, and sponsors to move from applause to partnership.", bullets: ["Curated roundtables", "Private tasting lounges", "Partnership concierge"], image: "assets/images/chicken-tikka-oriental-rice.png" },
-  { kicker: "Showtime", title: "Awards Reveal And Signature Plating", description: "Sound, lighting, and plated hero shots combine for a reveal sequence that feels closer to cinema than ceremony.", bullets: ["Stage cue choreography", "Chef spotlight moments", "Signature plating capture"], image: "assets/images/chicken-jujeh-kebab.png" }
+  { kicker: "Open", title: "Fire Procession And Opening Plates", description: "The first wave is theatre: grills igniting, brass service moving through the room, and the crowd immediately understanding this is not a passive food exhibition.", bullets: ["Open-fire grill line", "Host-led opening countdown", "Arrival camera flash corridor"], image: "assets/images/chicken-tikka-kebab.png" },
+  { kicker: "Perform", title: "Qawwali, Folk Pulse, And Stage Crossovers", description: "Live acts are not background filler here. They reshape the pace of the night, pull people back to the stage, and give the room a second wind between tasting runs.", bullets: ["Qawwali and folk percussion sets", "Lighting cues built for the music", "Front-stage seating for premium tickets"], image: "assets/images/aab-gosht-shorba.png" },
+  { kicker: "Capture", title: "Creator Pit And Crowd-Ready Moments", description: "A dedicated visual layer gives reels, interviews, behind-the-scenes content, and sponsor-friendly moments a reason to happen organically all night.", bullets: ["Reel booth and interview nook", "Step-and-repeat moments", "Fast-share food and crowd visuals"], image: "assets/images/chicken-tikka-oriental-rice.png" },
+  { kicker: "After Dark", title: "Street Food Lane After Sunset", description: "Once the room is warm, the night shifts into a louder, looser street-food chapter with rolling counters, bolder flavours, and the most social part of the event.", bullets: ["Mumbai-style chaat and late-night bites", "Faster service rhythm", "Closing-hour crowd energy"], image: "assets/images/chicken-jujeh-kebab.png" }
+];
+
+const vendorHighlights = [
+  { name: "Karim's", city: "Old Delhi", signature: "Seekh kebab and mutton korma", body: "The benchmark for smoke-heavy North Indian richness and the kind of flavour memory people travel for." },
+  { name: "Tunday Kababi", city: "Lucknow", signature: "Galouti kebab and sheermal", body: "Soft-spiced Awadhi detail, slow-cooked depth, and the exact kind of regal bite that anchors the North chapter." },
+  { name: "Bademiya", city: "Mumbai", signature: "Roomali rolls and late-night grills", body: "A reminder that Mumbai's strongest food memories often happen after dark, standing, talking, and ordering one more roll." },
+  { name: "MTR", city: "Bengaluru", signature: "Masala dosa and filter coffee", body: "The precision of South Indian service and comfort is essential if the festival wants real culinary range." },
+  { name: "Paragon", city: "Kozhikode", signature: "Malabar biryani and coastal plates", body: "Proof that coastal spice, restraint, and confidence can feel just as dramatic as charcoal and fire." },
+  { name: "Arsalan", city: "Kolkata", signature: "Biryani and rezala", body: "A clean benchmark for eastern richness, softer perfume, and crowd-pulling familiarity." }
+];
+
+const instagramMoments = [
+  { handle: "@tasteofhindustan", label: "Hero drop", caption: "First smoke burst. First camera flash. First plate that makes people stop walking.", meta: "Built for the opening reel" },
+  { handle: "@foodreelsindia", label: "Street lane", caption: "If the after-dark chaat lane does not get posted instantly, the lane is not built right.", meta: "Crowd-energy moment" },
+  { handle: "@mumbaifoodscene", label: "Creator pit", caption: "Short-form content works when the room already looks alive before the creators arrive.", meta: "Fast-share interview zone" }
+];
+
+const ticketTiers = [
+  { name: "Early Bird", badge: "Fastest Move", price: "INR 1,499", note: "Only 200 passes left in this release.", plan: "standard", highlight: false, features: ["Festival entry across all food chapters", "Access to the street-food lane", "Live stage and performance viewing", "Photo zones and creator-friendly installations"] },
+  { name: "Festival Pass", badge: "Most Popular", price: "INR 2,999", note: "Best value before the next price jump.", plan: "gold", highlight: true, features: ["Everything in Early Bird", "Priority access to chef demo seating", "Reserved block for qawwali and stage acts", "Tasting coupons across featured counters"] },
+  { name: "Royal Table", badge: "VIP Access", price: "INR 7,999", note: "Only 40 VIP lounge seats available.", plan: "vip", highlight: false, features: ["Everything in Festival Pass", "VIP lounge check-in and concierge support", "Premium seating near the main stage", "Curated tasting platter and elevated photo moments"] }
 ];
 
 const galleryItems = [
@@ -37,31 +64,31 @@ const galleryItems = [
 ];
 
 const packages = [
-  { name: "Standard", price: "INR 24,999", descriptor: "for emerging participants", badge: "Entry Tier", highlight: false, urgency: "Applications close after batch one fills.", features: ["1 participation category", "Delegate badge for 2 team members", "Brand listing on event microsite", "Access to networking floor and gallery zones", "Digital participation certificate"] },
-  { name: "Gold", price: "INR 54,999", descriptor: "for growth-stage brands", badge: "Most Popular", highlight: false, urgency: "Only 35 Gold showcase slots planned.", features: ["Everything in Standard", "Priority jury scheduling", "Branding on step-and-repeat wall", "Chef or founder interview clip", "Access to sponsor and media mixer"] },
-  { name: "VIP", price: "INR 1,19,999", descriptor: "for headline-ready hospitality brands", badge: "VIP Glow", highlight: true, urgency: "Only 20 VIP spotlight slots left.", features: ["Everything in Gold", "Premium showcase placement", "Private concierge and arrival host", "Dedicated press-photo session", "Afterparty and investor lounge access"] }
+  { name: "Early Bird", plan: "standard", price: "INR 1,499", descriptor: "for fast movers who want the night at the lowest release price", badge: "Fastest Move", highlight: false, urgency: "Only 200 early-bird passes in this release.", features: ["Festival entry across all food chapters", "Access to the after-dark street-food lane", "Live performance viewing", "Photo zones and creator-ready installations", "Fast confirmation through the reserve flow"] },
+  { name: "Festival Pass", plan: "gold", price: "INR 2,999", descriptor: "for guests who want the strongest all-round value", badge: "Most Popular", highlight: true, urgency: "Best value before the next ticket jump.", features: ["Everything in Early Bird", "Priority access to chef demo seating", "Reserved block for qawwali and stage acts", "Tasting coupons across featured counters", "Priority WhatsApp concierge support"] },
+  { name: "Royal Table", plan: "vip", price: "INR 7,999", descriptor: "for VIP hosts, brand guests, and premium night-out buyers", badge: "VIP Access", highlight: false, urgency: "Only 40 VIP lounge seats are available.", features: ["Everything in Festival Pass", "VIP lounge check-in and concierge support", "Premium seating close to the main stage", "Curated tasting platter and elevated service", "Highest-priority photo and hosting moments"] }
 ];
 
 const comparisonRows = [
-  ["Participation categories", "1", "2", "Up to 4"],
-  ["Team delegate passes", "2", "4", "8"],
-  ["Media interview support", "Basic", "Priority", "Dedicated"],
-  ["Branding visibility", "Directory listing", "Wall placement", "Stage plus lounge visibility"],
-  ["Networking access", "General floor", "Mixer access", "VIP lounge"],
-  ["Showcase placement", "Standard", "Preferred", "Spotlight zone"]
+  ["Entry access", "Festival entry", "Festival entry", "Festival entry"],
+  ["Stage viewing", "General", "Reserved block", "Premium zone"],
+  ["Chef demo seating", "Open seating", "Priority", "Priority plus concierge"],
+  ["Tasting credits", "None", "Included", "Included"],
+  ["VIP lounge", "No", "No", "Yes"],
+  ["Best for", "Fastest booking", "Most balanced experience", "Premium hosting"]
 ];
 
 const faqItems = [
-  { title: "Is this only for restaurants?", body: "No. The site includes a broader participation funnel for chefs, cafes, cloud kitchens, beverage brands, dessert studios, and hospitality innovators." },
-  { title: "Can I apply without final payment today?", body: "Yes. The form supports seat reservation intent first, then payment confirmation as the next concierge touchpoint." },
-  { title: "Will media and content coverage be included?", body: "Gold and VIP tiers are positioned with stronger coverage support, while all tiers benefit from the event's premium branded environment." },
-  { title: "Can packages be customized for sponsors?", body: "Yes. VIP is presented as the base for custom sponsor storytelling, branded lounges, and co-created media moments." }
+  { title: "Are these public event tickets or brand packages?", body: "These tiers are positioned as guest tickets for attendees who want to experience the festival night, from early-bird entry to VIP lounge access." },
+  { title: "Can I reserve now and complete payment after?", body: "Yes. The reserve flow is designed to capture intent first and let the concierge team complete payment with you if needed." },
+  { title: "Do groups or couples need separate bookings?", body: "You can reserve as an individual, couple, or group. The reservation form allows a lead guest to hold the booking and clarify group size." },
+  { title: "What makes VIP worth it?", body: "VIP is for guests who want premium stage access, lounge entry, better hosting, and a smoother overall night without queue pressure." }
 ];
 
 const testimonials = [
-  { name: "Founder Preview", title: "Hospitality Collective, Mumbai", quote: "This feels less like an awards form and more like a launch stage for brands that want to be remembered." },
-  { name: "Chef Preview", title: "Independent Chef Studio", quote: "The storytelling, the regional map, and the premium visual language make the event feel aspirational before anyone even arrives." },
-  { name: "Sponsor Preview", title: "Luxury Beverage Partner", quote: "The packages read like activation opportunities, not standard sponsorship slabs. That is the right tone for premium hospitality." }
+  { name: "Restaurateur Circle", title: "Bandra hospitality founder", quote: "You can feel the difference when a festival is designed like a night out people want to post from, not just a list of stalls." },
+  { name: "Food Creator Watchlist", title: "Short-form food video creator", quote: "If the street chapter, the fire line, and the music all land, this is the kind of event the city talks about for weeks." },
+  { name: "Corporate Host Demand", title: "Mumbai experience curator", quote: "The urgency works because the page sells a feeling first. Once that lands, the ticket decision becomes easy." }
 ];
 
 function iconSvg(name) {
@@ -86,6 +113,9 @@ function renderShell() {
   const modalHost = document.getElementById("modalHost");
   const lightboxHost = document.getElementById("lightboxHost");
 
+  const tierHref = page === "home" ? "#ticketSection" : "packages.html";
+  const primaryHref = page === "home" ? "#ticketSection" : "apply.html";
+
   if (progress) progress.innerHTML = "<span></span>";
 
   if (header) {
@@ -104,8 +134,8 @@ function renderShell() {
           </ul>
         </nav>
         <div class="nav-actions">
-          <a class="button-secondary" href="packages.html">View Tiers</a>
-          <a class="button" href="apply.html">Apply Now</a>
+          <a class="button-secondary" href="${tierHref}">Ticket Tiers</a>
+          <a class="button" href="${primaryHref}">Book Tickets</a>
           <button class="mobile-toggle" type="button" aria-label="Toggle menu" id="mobileToggle"><span></span></button>
         </div>
       </div>`;
@@ -137,8 +167,8 @@ function renderShell() {
               <ul class="footer-list">
                 <li><a href="experience.html">Event experience</a></li>
                 <li><a href="gallery.html">Gallery and testimonials</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="apply.html">Application funnel</a></li>
+                <li><a href="packages.html">Ticket tiers</a></li>
+                <li><a href="apply.html">Reserve tickets</a></li>
               </ul>
             </div>
           </div>
@@ -163,16 +193,16 @@ function renderShell() {
 
   if (actions) {
     actions.innerHTML = `
-      <a class="floating-button" href="apply.html">
+      <a class="floating-button" href="${primaryHref}">
         <div>
-          <strong>Book Your Spot</strong>
-          <span>Start the 4-step application</span>
+          <strong>Book Tickets Now</strong>
+          <span>Only 200 early-bird passes left</span>
         </div>
       </a>
       <a class="floating-button whatsapp" href="https://wa.me/9190000202626" target="_blank" rel="noreferrer">
         <div>
           <strong>WhatsApp Concierge</strong>
-          <span>Quick response for sponsorships</span>
+          <span>Quick response for ticket or VIP queries</span>
         </div>
       </a>`;
   }
@@ -391,6 +421,90 @@ function renderExperience() {
     </article>`).join("");
 }
 
+function renderStoryChapters() {
+  const host = document.getElementById("chapterGrid");
+  if (!host) return;
+  host.innerHTML = chapterData.map((item, index) => `
+    <article class="chapter-card reveal" style="background-image:url('${item.image}');transition-delay:${index * 70}ms;">
+      <div class="chapter-overlay"></div>
+      <div class="chapter-copy">
+        <small>${item.kicker}</small>
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <div class="chapter-note-row">${item.notes.map((note) => `<span>${note}</span>`).join("")}</div>
+        <a class="button-ghost chapter-button" href="#ticketSection">Reserve Spot</a>
+      </div>
+    </article>`).join("");
+}
+
+function renderVendorEdit() {
+  const host = document.getElementById("vendorGrid");
+  if (!host) return;
+  host.innerHTML = vendorHighlights.map((item) => `
+    <article class="vendor-card reveal">
+      <div class="vendor-head">
+        <div>
+          <strong>${item.name}</strong>
+          <span>${item.city}</span>
+        </div>
+        <small>${item.signature}</small>
+      </div>
+      <p>${item.body}</p>
+      <a class="button-ghost vendor-link" href="#ticketSection">Join The Crowd</a>
+    </article>`).join("");
+}
+
+function renderGalleryPreview() {
+  const host = document.getElementById("galleryPreviewGrid");
+  if (!host) return;
+  const items = galleryItems.slice(0, 4);
+  const encodeItem = (item) => encodeURIComponent(JSON.stringify(item));
+  host.innerHTML = items.map((item, index) => `
+    <article class="preview-shot reveal ${index === 0 ? "preview-shot-lg" : ""}">
+      <button type="button" data-lightbox="${encodeItem(item)}">
+        <img src="${item.image}" alt="${item.title}" loading="lazy" />
+        <div class="preview-shot-copy">
+          <strong>${item.title}</strong>
+          <span>${item.description}</span>
+        </div>
+      </button>
+    </article>`).join("");
+
+  host.querySelectorAll("[data-lightbox]").forEach((button) => {
+    button.addEventListener("click", () => openLightbox(JSON.parse(decodeURIComponent(button.dataset.lightbox))));
+  });
+}
+
+function renderInstagramWall() {
+  const host = document.getElementById("instagramGrid");
+  if (!host) return;
+  host.innerHTML = instagramMoments.map((item) => `
+    <article class="instagram-card reveal">
+      <div class="instagram-head">
+        <strong>${item.handle}</strong>
+        <span>${item.label}</span>
+      </div>
+      <p>${item.caption}</p>
+      <small>${item.meta}</small>
+    </article>`).join("");
+}
+
+function renderHomeTickets() {
+  const host = document.getElementById("ticketGrid");
+  if (!host) return;
+  host.innerHTML = ticketTiers.map((tier) => `
+    <article class="ticket-card ${tier.highlight ? "highlight" : ""} reveal">
+      <div class="ticket-head">
+        <span class="package-badge">${tier.badge}</span>
+        <h3>${tier.name}</h3>
+      </div>
+      <div class="ticket-price">${tier.price}</div>
+      <p class="ticket-note">${tier.note}</p>
+      <ul class="package-features">${tier.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
+      <a class="button ${tier.highlight ? "" : "button-secondary"} full" href="apply.html?plan=${tier.plan}">Book ${tier.name}</a>
+    </article>`).join("");
+}
+
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
   const filters = document.getElementById("galleryFilters");
@@ -478,7 +592,7 @@ function renderPackages() {
         <ul class="package-features">${pkg.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
         <div class="urgency-badge">${pkg.urgency}</div>
         <div class="cta-row" style="margin-top:1.4rem;">
-          <a class="button ${pkg.highlight ? "" : "button-secondary"} full" href="apply.html?plan=${pkg.name.toLowerCase()}">Choose ${pkg.name}</a>
+          <a class="button ${pkg.highlight ? "" : "button-secondary"} full" href="apply.html?plan=${pkg.plan || pkg.name.toLowerCase()}">Choose ${pkg.name}</a>
         </div>
       </article>`).join("");
   }
@@ -554,12 +668,12 @@ function renderFeatureCards() {
 
   if (socialHost) {
     const stats = [
-      ["1,000+", "projected participants for the 2026 edition"],
-      ["50+", "culinary cities and regional influences represented"],
-      ["20", "VIP showcase slots positioned with urgency"],
-      ["4-step", "application funnel for fast decision-making"],
-      ["Red carpet", "arrival and media storytelling built in"],
-      ["3D", "award-stage visual touch with trophy showcase"]
+      ["200", "early-bird passes in the current ticket release"],
+      ["12", "benchmark food legends shaping the curation bar"],
+      ["4", "performance-driven crowd moments across the night"],
+      ["3", "food chapters from North to Coast to Street"],
+      ["1", "venue: Jio World Convention Centre, Mumbai"],
+      ["30+", "creator-ready photo and reel moments built in"]
     ];
 
     socialHost.innerHTML = stats.map(([number, label]) => `
@@ -607,7 +721,7 @@ function setupApplicationForm() {
     fillConfirmation(form);
     const panel = document.getElementById("submitMessage");
     if (panel) {
-      panel.innerHTML = `<div class="confirmation-card"><strong>Application Sequenced</strong><p>Your TasteOfHindustan submission has been staged for concierge review. Use this screen as your confirmation while payment and document pickup are finalized.</p></div>`;
+      panel.innerHTML = `<div class="confirmation-card"><strong>Reservation Locked For Review</strong><p>Your TasteOfHindustan ticket request has been staged for concierge follow-up. Use this screen as your confirmation while payment and final seat release are completed.</p></div>`;
       panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   });
@@ -617,14 +731,19 @@ function setupApplicationForm() {
 
 function fillConfirmation(form) {
   const values = new FormData(form);
+  const planLabel = {
+    standard: "EARLY BIRD",
+    gold: "FESTIVAL PASS",
+    vip: "ROYAL TABLE"
+  };
   const setText = (id, value) => {
     const node = document.getElementById(id);
     if (node) node.textContent = value;
   };
 
   setText("confirmBrand", values.get("brand") || "Your Brand");
-  setText("confirmCategory", values.get("category") || "Premium Participant");
-  setText("confirmPlan", String(values.get("plan") || "vip").toUpperCase());
+  setText("confirmCategory", values.get("category") || "Food Lover");
+  setText("confirmPlan", planLabel[String(values.get("plan") || "vip")] || String(values.get("plan") || "vip").toUpperCase());
   setText("confirmCity", values.get("city") || "City pending");
   setText("confirmPayment", values.get("payment") || "Concierge invoice");
 }
@@ -646,9 +765,14 @@ setupCursorGlow();
 setupScrollProgress();
 startCountdown();
 renderMap();
+renderStoryChapters();
 renderExperience();
+renderVendorEdit();
 renderGallery();
+renderGalleryPreview();
+renderInstagramWall();
 renderPackages();
+renderHomeTickets();
 renderFeatureCards();
 setupApplicationForm();
 setupModalClose();

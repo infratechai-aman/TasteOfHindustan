@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | TasteOfHindustan 2026</title>
+  <meta name="description" content="Discover the red carpet, media coverage, networking lounges, and immersive award-night experience of TasteOfHindustan 2026." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body data-page="experience">
+  <div class="page-shell">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="gold-particles" id="goldParticles"></div>
+    <div class="site-progress" id="scrollProgress"></div>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main>
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Event Experience</span>
+            <h1>Luxury hospitality, media energy, and award-night theatre in one continuous flow.</h1>
+            <p>This page expands the emotional part of the site: what it feels like to arrive, to be seen, to network, to win, and to leave with media-ready momentum.</p>
+          </div>
+          <div class="metric-strip">
+            <div class="info-panel reveal"><strong>Flashline</strong><span>Structured entry zone for arrivals, interviews, and glamour-led capture.</span></div>
+            <div class="info-panel reveal"><strong>Press</strong><span>Dedicated storytelling beats for reels, snippets, and social amplification.</span></div>
+            <div class="info-panel reveal"><strong>Afterglow</strong><span>Lounge-led networking that keeps the premium tone alive after the stage.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Signature Moments</span>
+            <h2>The night is choreographed like a luxury premiere.</h2>
+          </div>
+          <div class="experience-stage glass-panel reveal">
+            <div class="experience-rail" id="experienceRail"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-shell trophy-shell">
+          <div class="trophy-stage reveal">
+            <model-viewer src="assets/models/golden-award.glb" camera-controls auto-rotate shadow-intensity="1.2" exposure="1.15" disable-zoom poster="assets/images/chicken-tikka-kebab.png"></model-viewer>
+            <div class="trophy-fallback">Golden Award Reveal</div>
+          </div>
+          <div class="spotlight-card reveal">
+            <strong>3D Premium Touch</strong>
+            <h2 style="margin:0 0 1rem;font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.2rem);">A rotating golden trophy gives the page an event-stage centerpiece.</h2>
+            <p class="copy">The model section brings the optional 3D flourish you asked for. It works as a prestige anchor between the emotional storytelling and the practical booking flow.</p>
+            <div class="spotlight-list">
+              <div>Subtle auto-rotation to keep the frame alive without feeling noisy.</div>
+              <div>Pairs with mouse-light glow and parallax for a cinematic premium effect.</div>
+              <div>Can be swapped later with the final TasteOfHindustan award asset if needed.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <span class="eyebrow">Event Timeline</span>
+            <h2>Every hour is designed to escalate anticipation.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-card reveal"><span class="timeline-time">5:00 PM</span><h3>Red Carpet Arrival</h3><p>Guests enter through a premium photo corridor with branded media backdrops and concierge welcome.</p></article>
+            <article class="timeline-card reveal"><span class="timeline-time">7:00 PM</span><h3>Chef & Founder Spotlights</h3><p>Short spotlight sequences turn participants into stories, not just names on a screen.</p></article>
+            <article class="timeline-card reveal"><span class="timeline-time">9:00 PM</span><h3>Awards & Networking</h3><p>The reveal sequence transitions into media interviews, sponsor lounges, and late-evening conversations.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <span class="eyebrow">What Guests Feel</span>
+            <h2>Not a brochure event. A room that validates ambition.</h2>
+          </div>
+          <div class="comparison-grid">
+            <article class="feature-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18"/><path d="M5 12h14"/></svg></div><h3>Arrival with stature</h3><p>The black and gold visual system keeps every section aligned with prestige.</p></article>
+            <article class="feature-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 10 8-6 8 6"/><path d="M6 10v8h12v-8"/></svg></div><h3>Networking with intent</h3><p>Spaces are framed as lounges, tables, and conversation zones rather than generic waiting areas.</p></article>
+            <article class="feature-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 1.6 5.2L19 10l-5.4 1.8L12 17l-1.6-5.2L5 10l5.4-1.8Z"/></svg></div><h3>Recognition with drama</h3><p>Scroll reveals, stage copy, and the trophy section make winning feel like a moment worth filming.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="siteFooter"></footer>
+    <div class="floating-actions" id="floatingActions"></div>
+    <div id="modalHost"></div>
+    <div id="lightboxHost"></div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

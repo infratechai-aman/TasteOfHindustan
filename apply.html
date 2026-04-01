@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply | TasteOfHindustan 2026</title>
+  <meta name="description" content="Start the 4-step TasteOfHindustan 2026 application flow: choose category, share details, set payment, and confirm." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="apply">
+  <div class="page-shell">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="gold-particles" id="goldParticles"></div>
+    <div class="site-progress" id="scrollProgress"></div>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main>
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <span class="eyebrow">Application Funnel</span>
+            <h1>A premium four-step flow that feels like concierge onboarding, not admin work.</h1>
+            <p>Choose your category, share brand details, select your payment route, and review everything on a polished confirmation stage.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-shell application-shell">
+          <aside class="stepper reveal">
+            <div class="stepper-item active"><div class="step-index">1</div><div><strong class="mini-title">Choose category</strong><p class="copy">Restaurants, chefs, cafes, sponsors, and more.</p></div></div>
+            <div class="stepper-item"><div class="step-index">2</div><div><strong class="mini-title">Upload details</strong><p class="copy">Brand, city, website, and participation notes.</p></div></div>
+            <div class="stepper-item"><div class="step-index">3</div><div><strong class="mini-title">Payment</strong><p class="copy">Reserve through invoice, UPI, or card preference.</p></div></div>
+            <div class="stepper-item"><div class="step-index">4</div><div><strong class="mini-title">Confirmation</strong><p class="copy">Final review before concierge follow-up.</p></div></div>
+          </aside>
+
+          <form class="form-card reveal" id="applicationForm">
+            <div class="step-progress"><span></span></div>
+
+            <div class="form-step active">
+              <div class="section-heading" style="margin-bottom:1.5rem;">
+                <span class="eyebrow">Step 1</span>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Choose your participation path</h2>
+              </div>
+              <div class="option-grid">
+                <div class="choice-card"><input id="cat-restaurant" type="radio" name="category" value="Restaurant" checked><label for="cat-restaurant"><strong>Restaurant</strong><span>For flagship dining rooms and multi-location brands.</span></label></div>
+                <div class="choice-card"><input id="cat-chef" type="radio" name="category" value="Chef"><label for="cat-chef"><strong>Chef</strong><span>For chef-led identities and culinary personalities.</span></label></div>
+                <div class="choice-card"><input id="cat-cafe" type="radio" name="category" value="Cafe"><label for="cat-cafe"><strong>Cafe</strong><span>For modern cafe formats with strong brand language.</span></label></div>
+                <div class="choice-card"><input id="cat-sponsor" type="radio" name="category" value="Sponsor"><label for="cat-sponsor"><strong>Sponsor</strong><span>For beverage, premium ingredient, and hospitality partners.</span></label></div>
+              </div>
+              <div class="option-grid" style="margin-top:1rem;">
+                <div class="choice-card"><input id="plan-standard" type="radio" name="plan" value="standard"><label for="plan-standard"><strong>Standard</strong><span>Entry access with polished visibility.</span></label></div>
+                <div class="choice-card"><input id="plan-gold" type="radio" name="plan" value="gold"><label for="plan-gold"><strong>Gold</strong><span>Priority features and stronger media support.</span></label></div>
+                <div class="choice-card"><input id="plan-vip" type="radio" name="plan" value="vip" checked><label for="plan-vip"><strong>VIP</strong><span>Headline-ready activation with lounge and press emphasis.</span></label></div>
+              </div>
+              <div class="form-actions"><span></span><button class="button" type="button" data-next-step>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <div class="section-heading" style="margin-bottom:1.5rem;">
+                <span class="eyebrow">Step 2</span>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Share brand and delegate details</h2>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="brand">Brand / Participant Name</label><input id="brand" name="brand" type="text" placeholder="Taste studio, restaurant, or founder name" /></div>
+                <div class="field"><label for="contact">Contact Person</label><input id="contact" name="contact" type="text" placeholder="Primary delegate" /></div>
+                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="name@brand.com" /></div>
+                <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+91" /></div>
+                <div class="field"><label for="city">City</label><input id="city" name="city" type="text" placeholder="Mumbai, Delhi, Bengaluru..." /></div>
+                <div class="field"><label for="website">Website / Instagram</label><input id="website" name="website" type="text" placeholder="https:// or @handle" /></div>
+                <div class="field full"><label for="files">Upload deck / menu / press kit</label><input id="files" name="files" type="file" /></div>
+                <div class="field full"><label for="notes">What makes your brand award-night ready?</label><textarea id="notes" name="notes" placeholder="Tell the jury and concierge team about your story, signature dishes, or experience style."></textarea></div>
+              </div>
+              <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="button" data-next-step>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <div class="section-heading" style="margin-bottom:1.5rem;">
+                <span class="eyebrow">Step 3</span>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Choose your payment route</h2>
+              </div>
+              <div class="option-grid">
+                <div class="choice-card"><input id="pay-invoice" type="radio" name="payment" value="Invoice" checked><label for="pay-invoice"><strong>Invoice</strong><span>Best for hospitality groups, sponsor teams, and finance approval flows.</span></label></div>
+                <div class="choice-card"><input id="pay-upi" type="radio" name="payment" value="UPI"><label for="pay-upi"><strong>UPI</strong><span>Fast track for founders and operators who want instant reservation.</span></label></div>
+                <div class="choice-card"><input id="pay-card" type="radio" name="payment" value="Card"><label for="pay-card"><strong>Card</strong><span>Secure direct payment route for quick closing.</span></label></div>
+                <div class="choice-card"><input id="pay-concierge" type="radio" name="payment" value="Concierge callback"><label for="pay-concierge"><strong>Concierge callback</strong><span>Talk through sponsorship, custom branding, or VIP activation needs.</span></label></div>
+              </div>
+              <div class="comparison-grid" style="margin-top:1rem;">
+                <article class="confirmation-card"><strong>VIP urgency</strong><p>Only 20 VIP spotlight slots are currently positioned on the site.</p></article>
+                <article class="confirmation-card"><strong>Gold showcase</strong><p>Priority scheduling and press-ready touchpoints are framed for Gold upward.</p></article>
+                <article class="confirmation-card"><strong>What happens next</strong><p>Your preferred payment method becomes the handoff point for the concierge team.</p></article>
+              </div>
+              <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="button" data-next-step>Review</button></div>
+            </div>
+
+            <div class="form-step">
+              <div class="section-heading" style="margin-bottom:1.5rem;">
+                <span class="eyebrow">Step 4</span>
+                <h2 style="font-size:clamp(2rem,4vw,3.2rem);">Review your confirmation stage</h2>
+              </div>
+              <div class="confirmation-grid">
+                <div class="confirmation-card"><strong>Brand</strong><span id="confirmBrand">Your Brand</span></div>
+                <div class="confirmation-card"><strong>Category</strong><span id="confirmCategory">Restaurant</span></div>
+                <div class="confirmation-card"><strong>Plan</strong><span id="confirmPlan">VIP</span></div>
+                <div class="confirmation-card"><strong>City</strong><span id="confirmCity">City pending</span></div>
+                <div class="confirmation-card"><strong>Payment</strong><span id="confirmPayment">Invoice</span></div>
+              </div>
+              <ul class="form-notes" style="margin-top:1.2rem;">
+                <li>Concierge follow-up can be positioned within 24 hours of submission.</li>
+                <li>Gold and VIP applications can be prioritized for media and sponsor planning.</li>
+                <li>The site is designed so this last screen feels like a reservation, not a dead-end form.</li>
+              </ul>
+              <div class="form-actions"><button class="button-secondary" type="button" data-prev-step>Back</button><button class="button" type="submit">Submit Application</button></div>
+              <div id="submitMessage" style="margin-top:1rem;"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="siteFooter"></footer>
+    <div class="floating-actions" id="floatingActions"></div>
+    <div id="modalHost"></div>
+    <div id="lightboxHost"></div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
